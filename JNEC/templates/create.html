@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <h1> Add Details </h1><hr>
+    </head>
+
+    <body>
+        <form method="post" action="{% url 'add_record' %}">
+            {% csrf_token %}
+
+            <lable> First_Name </lable>
+            <input type="text"  name="first_name"  required><br><br>
+
+            <lable> Last_Name </lable>
+            <input type="text" name="last_name" required><br><br>
+
+            <lable> Department </lable>
+            <input type="text"  name="department" required><br><br>
+
+            <lable> Company_Name </lable>
+            <input type="text" name="company_name" required><br><br>
+
+            <lable> Salary </lable>
+            <input type="integer" name="salary" required><br><br>
+
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+    </body> 
+</html>
+
